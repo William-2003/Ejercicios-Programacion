@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <!--especificar en donde se trabajara con vue-->
+    <div id="VUEroot">
+
+        <!--enlace de la data de vue      ****************** DIRECTIVAS DE VUE  *************-->
+
+        <p v-html="encabezado"></p>
+        
+        <input type="text" id="entrada" v-model="texto"> <!--v-model sirve para enlazar el valor de una variable entradas de valores con un imput o select-->
+        <p v-text="prueba"></p> <!--v-text randeriza todo el contenido de los datos-->
+        <p v-html="txthtml"></p><!--v-html permite incluir codigo html dentro de la etiqueta a usar-->
+
+        <!--interpolacion = representacion de un texto-->
+        <p>El valor de la entrada es {{prueba}}</p>
+    </div>
+    
+
+
+
+
+    
+    <!--REFERENCIA A VUE-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+
+    <script>
+        let datos={
+            texto: "Programacion IV hecho por william",
+            prueba: "para ver si funciona",
+            txthtml: "<b>texto en negrita PARA LA PRUEBA</b>", 
+            encabezado: "<h1>Inclusion de VueJS</h1>"
+
+        }
+        
+        //instancia de vue
+        var instanciaPrincipal = new Vue({
+            el: '#VUEroot', //etiqueta donde va a estar trabajando, en que parte del html va a trabajar
+            data: datos  //datos que se enviaran a donde se quiere trabajar y lo mostrara en la vista
+        });
+
+        //document.querySelector('#entrada').value = data.text
+    </script>
+
+
+</body>
+</html>

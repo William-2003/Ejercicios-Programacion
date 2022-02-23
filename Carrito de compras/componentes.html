@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes</title>
+</head>
+<body>
+    <div id="root">
+        <!--llamado del componente y paso de propiedades mediante props-->
+       <!--  <mensaje data="    intento a ver si funciona"> -->
+        <h1>Div del root</h1>
+        <ejemplocomp/>
+    </div>
+
+    <div id="master">
+        <h1>Div del master</h1>
+        <ejemplocomp/>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="vue.js"></script>
+
+    <script>
+        //creacion del componente
+        /* Vue.component('mensaje',{
+            props:['data'],
+            template:'<h2>Esto es un componente {{data}}</h2>'
+        })
+        //instancia de Vue
+        new Vue({
+            el:'#root'
+        }) */
+
+    </script>
+
+    
+</body>
+</html>

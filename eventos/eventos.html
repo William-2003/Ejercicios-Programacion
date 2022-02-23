@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    
+
+    <div id="app">
+        <button v-on:click.once="mensaje">Click aqui 1</button>
+        <button @click="mensaje">Click aqui 2</button>
+        <button v-on="events">Click aqui 3</button>
+
+        <input @keyup.enter="mensaje" placeholder="Presiona la tecla enter"></input>
+        <input type="text" @keyup.caps-lock="mayuscula" placeholder="Presiona Caps Lock"></input>
+
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script>
+
+        new Vue({
+            el:'#app',
+
+            data(){
+                return{
+                    events:{
+                        click: ()=>alert('Se presiono sobre el boton'),
+                        mouseleave:()=>alert('Se alejo el mouse del boton'),
+                    }
+                }
+            },
+
+            methods:{
+                mensaje(){
+                    alert('Programacion computacional');
+                },
+
+                mayuscula(){
+                    alert('Se ha activado las mayusculas');
+                }
+            }
+
+        })
+
+    </script>
+
+
+
+    <!--HACIENDOLO CON JAVASCRIPT-->
+   <!--  <button class="mensaje" onclick="mensaje" >Click aqui</button>
+
+    <script>
+        const button = document.querySelector("button.mensaje")
+        
+        button.addEventListener("click", ()=>{
+            alert("Programacion computacional");
+        });
+
+        
+    </script> -->
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--declaracion de variables con JS-->
+    
+    
+    <button onclick="alert('Programacion')">Presiona aqui...!!!</button>
+
+    <script>
+        /* document.write("Programacion ") */
+
+
+        //  ********************  declaracion de variables con JS ---------------------
+
+        const pi = 3.1416
+        console.log("el valor de pi es: " + pi)
+
+        var valor = "William"  //se puede reasignar el valor de la variable
+        console.log("Mi nombre es: " + valor)
+
+        var stringValue = "una frase"
+        let name="Jimenez"  //let no permite redeclarar pero si asignar
+
+
+
+        // *********************** condicionales-----------------------------
+        let val1 = "85"
+        let val2 = "25"
+        let resultado = val1===val2 //igualdad estricta
+
+        if(resultado){
+            console.log("Los valores son iguales")
+        }else{
+            console.log("Los valores NO son iguales")
+        }
+
+
+        switch(Resultado){
+            case true:
+                console.log("Los valores son iguales")
+                break; 
+            case false:
+                console.log("Los valores NO son iguales")
+                break;
+            default:
+                console.log("Los valores no se han definido")
+                break;
+        }
+
+
+        //array o arreglos
+        let nombres=["carmen", "pedro", "alonso"];
+        for(i=0, i < nombres.length; i++){
+            console.log(nombres[i])
+        }
+
+    </script>
+
+</body>
+</html>

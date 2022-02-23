@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!--especificar el lugar donde se trabajara con vue-->
+    <div id="root">
+        <!--enlace con el dato de vue-->
+        <input type="text" id="input" v-model="text"> <!-- v-model se usara para la entrada o control en un formulario-->
+        <p v-html="text"></p>   <!--v-html interpreta las etiquetas html dentro de un string-->
+
+
+        <!--interpolacion-->
+        <p>el valor del input es{{text}}</p>
+
+
+    </div>
+    
+
+
+    <!--agregamos referencia a Vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script>
+
+        let data={
+            text:'<h1><b>Programacion Computacional IV</b></h1>'
+        }
+
+        //instancia de vue
+        new Vue({
+            el:'#root',
+            data: data,
+
+        })
+    </script>
+
+</body>
+</html>
